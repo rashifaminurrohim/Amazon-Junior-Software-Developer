@@ -2,7 +2,7 @@ package IterativeStructures;
 
 public class ImplementingForLoops {
     public static void main(String[] args) {
-        IceCreamScoop();
+        iceCreamScoop();
         countingVowelsAndConsonants();
         stringReverse();
     }
@@ -10,7 +10,7 @@ public class ImplementingForLoops {
     /**
      * Toni knows that an ice cream container holds 20 scoops. To efficiently keep track of inventory, Toni needs to know how many scoops of ice cream are left in each container after a sale. This will help him order new stock on time.
      * **/
-    static void IceCreamScoop() {
+    static void iceCreamScoop() {
         int scoopIceCream;
         System.out.println("Selling ice cream!!");
         for (scoopIceCream = 0; scoopIceCream < 20; scoopIceCream++) {
