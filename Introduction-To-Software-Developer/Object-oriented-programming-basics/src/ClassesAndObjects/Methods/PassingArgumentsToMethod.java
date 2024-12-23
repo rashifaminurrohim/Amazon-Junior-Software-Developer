@@ -1,4 +1,4 @@
-package ClassesAndObjects;
+package ClassesAndObjects.Methods;
 
 public class PassingArgumentsToMethod {
 
