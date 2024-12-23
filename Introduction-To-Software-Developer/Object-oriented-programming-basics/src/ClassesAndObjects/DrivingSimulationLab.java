@@ -124,17 +124,15 @@ public class DrivingSimulationLab {
 
     // Please implement exitSimulation() function that terminates the simulation
     public static void exitSimulation() {
-        String YN = "N";
+        String YN;
         // Print an informative message about exiting the simulation here
         System.out.println("Are you sure want to exit the simulation? Y/N");
         YN = keyBoard.next();
         // Terminate the driving simulation
-        if (YN.equals("Y")){
+        if (YN.equals("Y")) {
             System.out.println("Thank you for using the simulator ;)");
             System.exit(0);
-        } else {
-            startSimulation();
-        }
+        } else if (YN.equals("N")) startSimulation();
 
     }
 
