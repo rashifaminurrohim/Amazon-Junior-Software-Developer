@@ -10,4 +10,22 @@ public class Car {
         // and using new line character \n
         return "Make: " + make + "\nModel: " + model + "\nColor: " + color + "\nYear: " + year;
     }
+
+    public void accelerate(){
+        System.out.println("The car is accelerating!");
+    }
+
+    public void turn(){
+        System.out.println("The car is turning!");
+    }
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "make='" + make + '\'' +
+                ", model='" + model + '\'' +
+                ", color='" + color + '\'' +
+                ", year=" + year +
+                '}';
+    }
 }
