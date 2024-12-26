@@ -11,6 +11,7 @@ public class Vehicle {
         this.model = "";
         this.color = "";
         this.speed = 0;
+        System.out.println("Vehicle created.");
     }
 
     // Parameterized constructor of Vehicle

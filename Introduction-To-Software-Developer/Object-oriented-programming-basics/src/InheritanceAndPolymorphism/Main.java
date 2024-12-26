@@ -22,5 +22,11 @@ public class Main {
         tesla.brake();
         System.out.println(tesla.model + " running at " + tesla.getSpeed() + " miles per hour.");
         tesla.adjustSeat(2);
+
+        // Create a SportsCar object using the parameterized constructor
+        SportsCar ferrari = new SportsCar("Ferrari", "F8 Tributo", "Red");
+        ferrari.activateTurboBoost();
+        System.out.println(ferrari.model + " running at " + ferrari.speed + " miles per hour");
+
     }
 }

@@ -6,6 +6,7 @@ public class Car extends Vehicle{
     public Car(){
         super();  // Java called the default constructor of the Vehicle class -> actually is implicitly called by java
         this.seatPosition = 0;
+        System.out.println("Car Created.");
     }
     // Parameterized constructor of Car
     public Car(String make, String model, String color){
