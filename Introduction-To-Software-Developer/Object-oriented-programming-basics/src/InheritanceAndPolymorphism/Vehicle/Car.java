@@ -1,4 +1,4 @@
-package InheritanceAndPolymorphism;
+package InheritanceAndPolymorphism.Vehicle;
 
 public class Car extends Vehicle{
     int seatPosition;

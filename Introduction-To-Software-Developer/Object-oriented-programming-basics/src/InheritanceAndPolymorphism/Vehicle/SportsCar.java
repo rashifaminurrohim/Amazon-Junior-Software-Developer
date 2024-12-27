@@ -1,4 +1,4 @@
-package InheritanceAndPolymorphism;
+package InheritanceAndPolymorphism.Vehicle;
 
 public class SportsCar extends Car {
     int turboBoost;

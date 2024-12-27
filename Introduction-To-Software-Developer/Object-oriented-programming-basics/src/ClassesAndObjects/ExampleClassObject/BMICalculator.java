@@ -1,4 +1,4 @@
-package ClassesAndObjects;
+package ClassesAndObjects.ExampleClassObject;
 
 public class BMICalculator {
     public double calculateBmiImperial(double weightInPounds, double heightInInches){

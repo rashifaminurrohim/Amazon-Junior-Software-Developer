@@ -1,4 +1,4 @@
-package ClassesAndObjects;
+package ClassesAndObjects.ExampleClassObject;
 
 public class MainBMICalculator {
     public static void main(String[] args){

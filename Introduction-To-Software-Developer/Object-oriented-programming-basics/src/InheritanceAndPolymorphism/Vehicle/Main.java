@@ -1,4 +1,4 @@
-package InheritanceAndPolymorphism;
+package InheritanceAndPolymorphism.Vehicle;
 
 public class Main {
     public static void main(String[] args) {

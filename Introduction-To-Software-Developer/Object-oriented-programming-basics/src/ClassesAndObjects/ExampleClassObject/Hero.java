@@ -1,4 +1,4 @@
-package ClassesAndObjects;
+package ClassesAndObjects.ExampleClassObject;
 
 public class Hero {
     // properties of Hero

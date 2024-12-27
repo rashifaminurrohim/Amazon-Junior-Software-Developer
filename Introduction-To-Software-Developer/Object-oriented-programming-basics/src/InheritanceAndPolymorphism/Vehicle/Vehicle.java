@@ -1,4 +1,4 @@
-package InheritanceAndPolymorphism;
+package InheritanceAndPolymorphism.Vehicle;
 
 public class Vehicle {
     String make;

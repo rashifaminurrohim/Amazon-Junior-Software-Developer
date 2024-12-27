@@ -1,4 +1,4 @@
-package ClassesAndObjects;
+package ClassesAndObjects.ExampleClassObject;
 
 public class Car {
     // Attributes (member variables) define a Car's properties

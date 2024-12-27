@@ -1,4 +1,4 @@
-package ClassesAndObjects;
+package ClassesAndObjects.ExampleClassObject;
 
 import java.util.Scanner;
 
