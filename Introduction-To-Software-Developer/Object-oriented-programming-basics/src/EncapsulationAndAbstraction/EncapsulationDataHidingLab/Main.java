@@ -1,4 +1,4 @@
-package EncapsulationAndAbstraction;
+package EncapsulationAndAbstraction.EncapsulationDataHidingLab;
 
 public class Main {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package EncapsulationAndAbstraction;
+package EncapsulationAndAbstraction.EncapsulationDataHidingLab;
 
 import java.util.Scanner;
 
