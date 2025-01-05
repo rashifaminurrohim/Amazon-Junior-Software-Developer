@@ -37,6 +37,5 @@ public class Main {
         driverBot.setChoice();
         driverBot.takeAction();
 
-
     }
 }
