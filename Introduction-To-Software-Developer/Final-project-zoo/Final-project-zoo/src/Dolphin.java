@@ -4,10 +4,15 @@ public class Dolphin extends Animal implements Swim{
 
     private String color;
 
-    public Dolphin(String nameOfAnimal) {
-        super(nameOfAnimal = "Dolphin");
-        this.swimmingSpeed = 0;
+    public Dolphin() {
+        this.swimmingSpeed = 1;
         this.color = "Grey";
+    }
+
+    public Dolphin(String nameOfAnimal, int swimmingSpeed, String color) {
+        super(nameOfAnimal);
+        this.swimmingSpeed = swimmingSpeed;
+        this.color = color;
     }
 
     public int getSwimmingSpeed() {
