@@ -4,17 +4,8 @@ public class Tiger extends Animal implements Walk{
     private int speed;
     private int soundLevelOfRoar;
 
-    public Tiger() {
-        this.numberOfStripes = 1;
-        this.speed = 1;
-        this.soundLevelOfRoar = 1;
-    }
-
-    public Tiger(String nameOfAnimal, int numberOfStripes, int speed, int soundLevelOfRoar) {
+    public Tiger(String nameOfAnimal) {
         super(nameOfAnimal);
-        this.numberOfStripes = numberOfStripes;
-        this.speed = speed;
-        this.soundLevelOfRoar = soundLevelOfRoar;
     }
 
     public int getNumberOfStripes() {

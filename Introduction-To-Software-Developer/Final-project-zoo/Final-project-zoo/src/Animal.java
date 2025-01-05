@@ -57,7 +57,4 @@ abstract public class Animal implements Eat {
     public void eatingFood() {
         System.out.println("The animal: " + nameOfAnimal + " is eating.");
     }
-
-
-
 }
