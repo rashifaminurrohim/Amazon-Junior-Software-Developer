@@ -1,3 +1,5 @@
+package Button;
+
 public class SendButtonClass extends AbstractButtonClass implements ButtonPress {
 
     private String sendTo;

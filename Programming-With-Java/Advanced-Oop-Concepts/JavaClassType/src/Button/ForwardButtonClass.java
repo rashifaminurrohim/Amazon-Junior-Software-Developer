@@ -1,3 +1,5 @@
+package Button;
+
 public class ForwardButtonClass extends AbstractButtonClass implements ButtonPress{
 
     private String forwardTo;

@@ -1,3 +1,5 @@
+package Button;
+
 abstract public class AbstractButtonClass {
     private String caption;
 
