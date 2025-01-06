@@ -1,3 +1,7 @@
+package Animal;
+
+import Interface.Eat;
+
 abstract public class Animal implements Eat {
 
     // property representing name of the animal
@@ -13,7 +17,7 @@ abstract public class Animal implements Eat {
     private int age;
 
     public Animal() {
-        nameOfAnimal = "Unknown Animal";
+        nameOfAnimal = "Unknown Animal.Animal";
     }
 
     public Animal(String nameOfAnimal) {

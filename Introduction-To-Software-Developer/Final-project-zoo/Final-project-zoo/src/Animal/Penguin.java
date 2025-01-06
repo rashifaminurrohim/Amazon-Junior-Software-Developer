@@ -1,11 +1,16 @@
-public class Penguin extends Animal implements Walk, Swim{
+package Animal;
+
+import Interface.Swim;
+import Interface.Walk;
+
+public class Penguin extends Animal implements Walk, Swim {
 
     private boolean isSwimming;
     private int walkSpeed;
     private int swimSpeed;
 
     public Penguin() {
-        setNameOfAnimal("Penguin");
+        setNameOfAnimal("Animal.Penguin");
     }
 
     public boolean isSwimming() {
@@ -34,21 +39,21 @@ public class Penguin extends Animal implements Walk, Swim{
 
     @Override
     public void eatingFood() {
-        System.out.println("Penguin: I am eating delicious fish.");
+        System.out.println("Animal.Penguin: I am eating delicious fish.");
     }
 
     @Override
     public void eatingCompleted() {
-        System.out.println("Penguin: I am eating delicious fish.");
+        System.out.println("Animal.Penguin: I am eating delicious fish.");
     }
 
     @Override
     public void swimming() {
-        System.out.println("Penguin: I am swimming at the speed " + getSwimSpeed() + " nautical miles per hour");
+        System.out.println("Animal.Penguin: I am swimming at the speed " + getSwimSpeed() + " nautical miles per hour");
     }
 
     @Override
     public void walking() {
-        System.out.println("Penguin: I am walking at the speed " + getWalkSpeed() + " mph");
+        System.out.println("Animal.Penguin: I am walking at the speed " + getWalkSpeed() + " mph");
     }
 }

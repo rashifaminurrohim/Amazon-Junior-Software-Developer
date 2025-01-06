@@ -1,11 +1,15 @@
-public class Tiger extends Animal implements Walk{
+package Animal;
+
+import Interface.Walk;
+
+public class Tiger extends Animal implements Walk {
 
     private int numberOfStripes;
     private int speed;
     private int soundLevelOfRoar;
 
     public Tiger() {
-        setNameOfAnimal("Tiger");
+        setNameOfAnimal("Animal.Tiger");
     }
 
     public int getNumberOfStripes() {
@@ -39,11 +43,11 @@ public class Tiger extends Animal implements Walk{
 
     @Override
     public void eatingCompleted() {
-        System.out.println("Tiger: I have eaten meat.");
+        System.out.println("Animal.Tiger: I have eaten meat.");
     }
 
     @Override
     public void walking() {
-        System.out.println("Tiger: I am moving at the speed " + getSpeed());
+        System.out.println("Animal.Tiger: I am moving at the speed " + getSpeed());
     }
 }

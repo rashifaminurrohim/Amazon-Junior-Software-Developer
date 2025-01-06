@@ -1,3 +1,8 @@
+import Animal.Animal;
+import Animal.Dolphin;
+import Animal.Penguin;
+import Animal.Tiger;
+
 import java.util.Scanner;
 
 public class Main {
@@ -19,36 +24,36 @@ public class Main {
 
         Penguin penguinObject = new Penguin();
 
-        /** TODO 1: extend the class Animal to create a new
-         *          land based animal named "Tiger" which extends
-         *          Animal.
-         *          Extra properties of class "Tiger" are:
+        /** TODO 1: extend the class Animal.Animal to create a new
+         *          land based animal named "Animal.Tiger" which extends
+         *          Animal.Animal.
+         *          Extra properties of class "Animal.Tiger" are:
          *          1. number of stripes
          *          2. speed
          *          3. sound level of roar
          *
          **/
 
-        /** TODO 2: extend the class Animal to create a new
-         *          water based animal named "Dolphin" which
-         *          extends Animal
-         *          Extra properties of class "Dolphin" include:
+        /** TODO 2: extend the class Animal.Animal to create a new
+         *          water based animal named "Animal.Dolphin" which
+         *          extends Animal.Animal
+         *          Extra properties of class "Animal.Dolphin" include:
          *          1. color of dolphin
          *          2. swimming speed
          *
          **/
 
 
-        /** TODO 3: implemement the "Eat" interface in the
-         *          "Tiger" class created in the TODO 1
+        /** TODO 3: implemement the "Interface.Eat" interface in the
+         *          "Animal.Tiger" class created in the TODO 1
          *          and also in the
-         *          "Dolphin" class created in TODO 2.
+         *          "Animal.Dolphin" class created in TODO 2.
          **/
 
 
 
-        /** TODO 5: implement the "Walk" interface in
-         *          "Tiger" class created in the TODO 1
+        /** TODO 5: implement the "Interface.Walk" interface in
+         *          "Animal.Tiger" class created in the TODO 1
          *          and in the  implementation of the
          *          "walking" method of the interface
          *          display -
@@ -57,23 +62,23 @@ public class Main {
          *
          **/
 
-        /** TODO 6: create a new interface named "Swim"
+        /** TODO 6: create a new interface named "Interface.Swim"
          *          and declaring a method inside it
          *          named "swimming" with the return type
          *          "void"
          **/
 
-        /** TODO 7: implement the "Swim" interface
-         *          in the "Dolphin" class and the
+        /** TODO 7: implement the "Interface.Swim" interface
+         *          in the "Animal.Dolphin" class and the
          *          "swimming" method in its implementation
          *          should display the swimming speed as
-         *          "Dolphin: I am swimming at the speed ...."
+         *          "Animal.Dolphin: I am swimming at the speed ...."
          *          where .... is the value of the variable
          *          "swimmingSpeed"
          **/
 
 
-        /** TODO 8: create a menu system to work with the Animal selected
+        /** TODO 8: create a menu system to work with the Animal.Animal selected
          *          use the switch provided below
          **/
         do {
@@ -220,7 +225,7 @@ public class Main {
             continueOuterLoop = keyboard.nextInt();
 
         } while(continueOuterLoop == 1);
-        /** TODO 9: create a class "Penguin" from the "Animal" class **/
+        /** TODO 9: create a class "Animal.Penguin" from the "Animal.Animal" class **/
 
         /** TODO 10: integrate the choice to pick a "penguin" in the menu system **/
 
@@ -230,9 +235,9 @@ public class Main {
         int choiceGivenByUser;
 
         System.out.println("******* ZOO ANIMAL choice menu ******");
-        System.out.println("1. Tiger");
-        System.out.println("2. Dolphin");
-        System.out.println("3. Penguin");
+        System.out.println("1. Animal.Tiger");
+        System.out.println("2. Animal.Dolphin");
+        System.out.println("3. Animal.Penguin");
 
         System.out.println("Enter choice of animal (1-3):");
         choiceGivenByUser = keyboard.nextInt();

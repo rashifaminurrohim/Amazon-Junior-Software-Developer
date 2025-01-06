@@ -1,11 +1,15 @@
-public class Dolphin extends Animal implements Swim{
+package Animal;
+
+import Interface.Swim;
+
+public class Dolphin extends Animal implements Swim {
 
     private int swimmingSpeed;
 
     private String color;
 
     public Dolphin() {
-        setNameOfAnimal("Dolphin");
+        setNameOfAnimal("Animal.Dolphin");
     }
 
     public int getSwimmingSpeed() {
@@ -26,16 +30,16 @@ public class Dolphin extends Animal implements Swim{
 
     @Override
     public void eatingFood() {
-        System.out.println("Dolphin: I am eating delicious fish.");
+        System.out.println("Animal.Dolphin: I am eating delicious fish.");
     }
 
     @Override
     public void eatingCompleted() {
-        System.out.println("Dolphin: I have eaten fish.");
+        System.out.println("Animal.Dolphin: I have eaten fish.");
     }
 
     @Override
     public void swimming() {
-        System.out.println("Dolphin: I am swimming at the speed " + getSwimmingSpeed());
+        System.out.println("Animal.Dolphin: I am swimming at the speed " + getSwimmingSpeed());
     }
 }
