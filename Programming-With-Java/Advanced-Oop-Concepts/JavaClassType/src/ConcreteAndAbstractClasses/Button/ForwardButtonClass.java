@@ -1,4 +1,4 @@
-package Button;
+package ConcreteAndAbstractClasses.Button;
 
 public class ForwardButtonClass extends AbstractButtonClass implements ButtonPress{
 

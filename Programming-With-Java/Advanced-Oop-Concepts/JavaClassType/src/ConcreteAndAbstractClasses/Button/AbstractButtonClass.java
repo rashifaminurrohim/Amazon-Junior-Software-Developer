@@ -1,4 +1,4 @@
-package Button;
+package ConcreteAndAbstractClasses.Button;
 
 abstract public class AbstractButtonClass {
     private String caption;
