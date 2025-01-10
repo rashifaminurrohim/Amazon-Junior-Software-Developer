@@ -1,4 +1,6 @@
-//TODO 10: make the Employee class implement EmployeeInterface
+package CollegeFeeManagement;
+
+//TODO 10: make the CollegeFeeManagement.Employee class implement CollegeFeeManagement.EmployeeInterface
 class Employee extends Person implements EmployeeInterface {
     //TODO 11: declare basicPay as int attribute
     private int basicPay;

@@ -1,3 +1,5 @@
+package CollegeFeeManagement;
+
 class Student extends Person implements StudentInterface {
     //TODO 5: add subject and marks attributes
     private String subject;
@@ -33,6 +35,6 @@ class Student extends Person implements StudentInterface {
     public void fee(int fee) {
         //TODO 9: override fee() method to print the message
         // the student has paid the specified fee as the argument.
-        System.out.println("Student pays the fees " + fee);
+        System.out.println("CollegeFeeManagement.Student pays the fees " + fee);
     }
 }

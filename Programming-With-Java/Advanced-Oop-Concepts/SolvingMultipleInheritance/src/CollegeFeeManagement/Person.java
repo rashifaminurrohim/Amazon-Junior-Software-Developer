@@ -1,5 +1,7 @@
+package CollegeFeeManagement;
+
 abstract class Person {
-    //TODO 1: declare Person attributes name and age here
+    //TODO 1: declare CollegeFeeManagement.Person attributes name and age here
     String name;
     int age;
 
