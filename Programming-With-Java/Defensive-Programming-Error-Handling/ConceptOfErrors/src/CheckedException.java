@@ -2,7 +2,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-public class Calculator {
+public class CheckedException {
     int firstNumber;
     int secondNumber;
 
