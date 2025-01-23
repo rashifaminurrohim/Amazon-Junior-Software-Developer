@@ -5,8 +5,8 @@ public class ExploreExceptionTypes {
     public static void main(String[] args) {
         File file = new File("my file.txt");
         // FileNotFoundException -> checked exception
-        FileInputStream stream = new FileInputStream(file);
+        // FileInputStream stream = new FileInputStream(file);
         // Division by zero Exception -> unchecked exception
-        int number = 100/0;
+        // int number = 100/0;
     }
 }
