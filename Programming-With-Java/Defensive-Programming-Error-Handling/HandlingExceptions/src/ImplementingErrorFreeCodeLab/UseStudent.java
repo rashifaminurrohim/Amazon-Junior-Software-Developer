@@ -12,24 +12,37 @@ public class UseStudent {
         students[0] = s1;
         students[1] = s2;
         listStudents(students);
+        thisIsRisky();
     }
 
     private static void printStudent(Student student) {
-        System.out.println("Name: " + student.getName());
-        System.out.println("Age: " + student.getAge());
+        try{
+            System.out.println("Name: " + student.getName());
+            System.out.println("Age: " + student.getAge());
+        } catch (NullPointerException e){
+            System.out.println(e.getMessage());
+        }
     }
 
     private static void listStudents(Student[] students) {
-        for (int i = 0; i <= students.length; i++) {
-            System.out.println(students[i].getName() + " " + students[i].getAge());
+        try {
+            for (int i = 0; i <= students.length; i++) {
+                System.out.println(students[i].getName() + " " + students[i].getAge());
+            }
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println(e.getMessage());
         }
     }
 
     private static void thisIsRisky() {
+        try{
+            int priceTag = 50;
+            int discount = 0;
+            System.out.println("Total = " + (priceTag/discount));
+        } catch (ArithmeticException e) {
+            System.out.println(e.getMessage());
+        }
 
-        int priceTag = 50;
-        int discount = 0;
-        System.out.println("Total = " + (priceTag/discount));
 
     }
 
