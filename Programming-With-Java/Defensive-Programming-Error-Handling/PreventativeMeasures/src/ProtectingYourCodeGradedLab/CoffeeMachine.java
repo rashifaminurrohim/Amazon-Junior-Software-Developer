@@ -38,15 +38,19 @@ public class CoffeeMachine {
                     System.out.print("How many servings would you like? (a number please): ");
                     int numberOfShots = keyboard.nextInt();
 
-                    // TODO 7: surround the myEspresso object with a try-catch block to handle the ArithmeticException.
-
-                    Espresso myEspresso = new Espresso(espressoName, espressoRoast, espressoPrice, numberOfShots);
-
                     // TODO 8: declare the myEspresso object before the try block and set it to null.
-
-                    // TODO 9: inside the catch block, ask the user to enter number of shots and store it in numberOfShots
-
-                    // TODO 10: add a finally block, and initialize the myEspresso object again
+                    Espresso myEspresso = null;
+                    // TODO 7: surround the myEspresso object with a try-catch block to handle the ArithmeticException.
+                    try {
+                        myEspresso = new Espresso(espressoName, espressoRoast, espressoPrice, numberOfShots);
+                    } catch (ArithmeticException e) {
+                        // TODO 9: inside the catch block, ask the user to enter number of shots and store it in numberOfShots
+                        System.out.print("How many servings would you like? (a number please): ");
+                        numberOfShots = keyboard.nextInt();
+                        // TODO 10: add a finally block, and initialize the myEspresso object again
+                    } finally {
+                        myEspresso = new Espresso(espressoName, espressoRoast, espressoPrice, numberOfShots);
+                    }
 
                     myEspresso.grindBeans();
 
