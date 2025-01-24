@@ -1,5 +1,7 @@
 package ProtectingYourCodeGradedLab;
 
+import com.sun.jdi.InvalidTypeException;
+
 import java.util.Scanner;
 
 public class CoffeeMachine {
