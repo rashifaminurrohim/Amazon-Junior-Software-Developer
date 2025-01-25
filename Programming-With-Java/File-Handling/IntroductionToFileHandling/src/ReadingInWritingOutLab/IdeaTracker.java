@@ -1,9 +1,5 @@
 package ReadingInWritingOutLab;
 
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-
 import java.util.Scanner;
 
 public class IdeaTracker {
@@ -36,7 +32,7 @@ public class IdeaTracker {
 
                     // Ask the user for the path of the file to read and save the path in a variable
                     System.out.print("Please enter the file of the path to read: ");
-                    String filePath = keyboard.nextLine();
+                    String filePath = keyboard.next();
 
                     // call the readIdea() method to read the file and store the contents in a variable
                     String contentsReadFromFile = ideaReader.readIdea(filePath);
@@ -59,7 +55,7 @@ public class IdeaTracker {
                     String ideaName = keyboard.nextLine();
 
                     //  create a variable and prepend src/ and append .txt to the name of the file
-                    String ideaFilePath = "src/" + ideaName + ".txt";
+                    String ideaFilePath = "src/documents/" + ideaName + ".txt";
 
                     // ask the user to enter some description of the project and store it in a variable
                     System.out.println("Please enter some description for the project: ");
