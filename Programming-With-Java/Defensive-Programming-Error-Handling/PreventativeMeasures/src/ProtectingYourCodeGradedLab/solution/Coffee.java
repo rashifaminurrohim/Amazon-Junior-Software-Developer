@@ -1,4 +1,4 @@
-package ProtectingYourCodeGradedLab;
+package ProtectingYourCodeGradedLab.solution;
 
 import com.sun.jdi.InvalidTypeException;
 
@@ -17,10 +17,10 @@ public class Coffee {
         this.price = price;
 
         // TODO 3: surround the setCaffeineLevel() method call with a try-catch block to handle the exception
-        // The constructor calls the method to set the caffeine level based on the roast
         try {
             setCaffeineLevel();
-        } catch (InvalidTypeException e) {
+            // The constructor calls the method to set the caffeine level based on the roast
+        } catch (InvalidTypeException invalidRoastTypeException) {
             // TODO 4: inside the catch block, set the caffeineLevelInMg to 50
             caffeineLevelInMg = 50;
         }
@@ -37,7 +37,7 @@ public class Coffee {
             caffeineLevelInMg = 150;
         } else {
             // TODO 1: remove this statement & throw a "InvalidTypeException" with a message
-            throw new InvalidTypeException("invalid roast: " + roast + ", please select a valid roast type!");
+            throw new InvalidTypeException("invalid roast: ‘" + roast + "’, please select a valid roast type!");
         }
     }
 
