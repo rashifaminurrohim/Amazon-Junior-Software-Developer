@@ -1,7 +1,5 @@
 package ProtectingYourCodeGradedLab;
 
-import com.sun.jdi.InvalidTypeException;
-
 import java.util.Scanner;
 
 public class CoffeeMachine {
@@ -88,15 +86,19 @@ public class CoffeeMachine {
                         syrupFlavor = keyboard.next();
                     }
 
-                    // TODO 13: surround the myLatte object with a try-catch block to handle the IllegalArgumentException.
-
-                    Latte myLatte = new Latte(latteName, latteRoast, lattePrice, milkType, syrupFlavor);
-
                     // TODO 14: declare the myLatte object before the try block and set it to null.
-
-                    // TODO 15: inside the catch block, ask the user to enter milkType again
-
-                    // TODO 16: add a finally block, and initialize the myLatte object again
+                    Latte myLatte = null;
+                    // TODO 13: surround the myLatte object with a try-catch block to handle the IllegalArgumentException.
+                    try {
+                        myLatte = new Latte(latteName, latteRoast, lattePrice, milkType, syrupFlavor);
+                    } catch (IllegalArgumentException e) {
+                        // TODO 15: inside the catch block, ask the user to enter milkType again
+                        System.out.print("What milk type would you like? (whole, skim, almond, oat): ");
+                        milkType = keyboard.next();
+                        // TODO 16: add a finally block, and initialize the myLatte object again
+                    } finally {
+                        myLatte = new Latte(latteName, latteRoast, lattePrice, milkType, syrupFlavor);
+                    }
 
                     myLatte.grindBeans();
 
