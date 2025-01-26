@@ -1,4 +1,4 @@
-package WritingDifferentFileTypes;
+package WritingDifferentFileTypesLab;
 
 import java.io.*;
 import java.util.Scanner;

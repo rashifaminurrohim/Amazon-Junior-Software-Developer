@@ -1,4 +1,4 @@
-package WritingDifferentFileTypes;
+package WritingDifferentFileTypesLab;
 
 public class Person {
     //TODO 1: declare instance variables
