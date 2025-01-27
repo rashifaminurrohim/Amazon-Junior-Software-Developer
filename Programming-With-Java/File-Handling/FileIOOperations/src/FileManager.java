@@ -142,7 +142,7 @@ public class FileManager {
     }
 
     /**
-     * Using Java NIO to rename a file
+     * Using Java NIO to copy a file
      */
     public static void copyFileNIO(String sourcePath, String targetPath) {
         Path source = Paths.get(sourcePath);
@@ -157,7 +157,7 @@ public class FileManager {
         } catch (FileAlreadyExistsException e) {
             System.out.println("Target file already exist.");
         } catch (AccessDeniedException e) {
-            System.out.println("Access denied: Unable to delete the file.");
+            System.out.println("Access denied: Unable to copy the file.");
         } catch (IOException e) {
             System.out.println("I/O error: " + e.getMessage());
         } catch (Exception e) {
