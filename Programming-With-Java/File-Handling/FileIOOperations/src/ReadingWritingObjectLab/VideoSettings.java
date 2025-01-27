@@ -39,9 +39,10 @@ public class VideoSettings implements Serializable {
 
         try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(filePath))) {
             // TODO 1: Write the VideoSettings object to the ObjectOutputStream
-
+            oos.writeObject(settings);
         } catch (IOException e) {
             // TODO 2: Handle IOException by printing an error message
+            System.err.println(e.getMessage());
 
         }
     }
@@ -59,7 +60,8 @@ public class VideoSettings implements Serializable {
 
             System.err.println("Error loading settings: " + e.getMessage());
             // TODO 4: Return default settings in case of error
-
+            assert settings != null;
+            return new VideoSettings(settings.getVolumeLevel(), settings.getPlaybackSpeed());
         }
         return settings;
     }
