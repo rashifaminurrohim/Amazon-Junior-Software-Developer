@@ -139,13 +139,13 @@ public class Main {
                  * object state of the animal into the file
                  */
                 case 4:
-
+                    writeObjectsToFile(tigerObject, penguinObject, dolphinObject);
                     /**
                      * TODO 6: Introduce case 5 to call the readObjectsFromFile method to
                      * fetch the object state of the animal from the file to display on screen
                      */
                 case 5:
-
+                    readObjectsFromFile();
                 default:
                     System.out.println("Sorry no such animal available.");
             }
@@ -190,8 +190,22 @@ public class Main {
      *  TODO 3.b: Save the state of Penguin to output penguin.txt file
      *  TODO 3.c: Save the state of Dolphin to output dolphin.txt file
      */
+    public static void writeObjectsToFile(Tiger tiger, Penguin penguin, Dolphin dolphin) {
+        String directoryPath = "src/documents";
+        String[] titles = {"tiger", "penguin", "dolphin"};
+        String[] content = {tiger.toString(), penguin.toString(), dolphin.toString()};
 
-
+        for (int i = 0; i < titles.length; i++) {
+            String fileName = (titles[i]) + ".txt";
+            String contents = content[i];
+            File file = new File(directoryPath, fileName);
+            try (FileWriter writer = new FileWriter(file)) {
+                writer.write(contents);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
     /**
      * TODO 3: End
      */
@@ -202,10 +216,37 @@ public class Main {
      * TODO 4.b: Print the save state of Penguin from the file penguin.txt
      * TODO 4.c: Print the save state of Dolphin from the file dolphin.txt
      */
+    public static void readObjectsFromFile() {
+        String directoryPath = "src/documents/";
+        String[] titles = {"tiger", "penguin", "dolphin"};
 
-    /**
-     * TODO 4: End
-     */
+        for (int i = 0; i < titles.length; i++) {
+            String fileName = directoryPath + (titles[i]) + ".txt";
+            File file = new File(fileName);
+            int text;
+            try (FileReader reader = new FileReader(file)) {
+                while ((text = reader.read()) != -1) {
+                    System.out.print((char) text);
+                }
+                System.out.println("\n");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+//            try (BufferedReader reader = new BufferedReader(new FileReader(file)) {
+//
+//            } catch (FileNotFoundException e) {
+//                throw new RuntimeException(e);
+//            } catch (IOException e) {
+//                throw new RuntimeException(e);
+//            }
+        }
+    }
+
+
+/**
+ * TODO 4: End
+ */
 }
 
 

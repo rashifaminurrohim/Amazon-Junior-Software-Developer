@@ -1,6 +1,7 @@
-import java.io.Serializable;
+import java.io.*;
 
 abstract public class Animal implements Eat, Serializable {
+    @Serial
     private static final long serialVersionUID = 1L;
 
     // property representing name of the animal
@@ -64,5 +65,25 @@ abstract public class Animal implements Eat, Serializable {
     @Override
     public void eatingFood() {
         System.out.println("The animal: " + nameOfAnimal + " is eating.");
+    }
+
+    public static void serializedAnimal(Animal animals, String filePath) {
+        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(filePath))) {
+            oos.writeObject(animals);
+            System.out.println("Serialized animal data is saved in " + filePath);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void deserializedAnimal(String filePath) {
+        Animal animal = null;
+        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(filePath))){
+            animal = ((Animal) ois.readObject());
+            System.out.println("Deserialized File:\n" +
+                    animal.toString());
+        } catch (IOException | ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

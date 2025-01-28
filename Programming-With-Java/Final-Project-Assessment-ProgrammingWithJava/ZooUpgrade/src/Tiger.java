@@ -1,9 +1,12 @@
+import java.io.Serial;
 import java.io.Serializable;
 
 /**
  * TODO 1.a: Implement serializable interface for class Tiger
  */
-public class Tiger extends Animal implements Walk {
+public class Tiger extends Animal implements Walk, Serializable {
+    @Serial
+    private static final long serialVersionUID = 21L;
 
     // property for stripes on tiger
     int numberOfStripes;
@@ -51,6 +54,15 @@ public class Tiger extends Animal implements Walk {
     @Override
     public void walking() {
         System.out.println("Tiger: I am moving at the speed " + speed);
+    }
+
+    @Override
+    public String toString() {
+        return "Tiger{" +
+                "numberOfStripes=" + numberOfStripes +
+                ", speed=" + speed +
+                ", soundLevel=" + soundLevel +
+                '}';
     }
 
 }

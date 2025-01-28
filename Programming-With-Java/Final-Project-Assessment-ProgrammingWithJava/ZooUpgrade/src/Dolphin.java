@@ -1,9 +1,12 @@
+import java.io.Serial;
 import java.io.Serializable;
 
 /**
  * TODO 1.c: Implement serializable interface for class Dolphin
  */
-public class Dolphin extends Animal implements Swim {
+public class Dolphin extends Animal implements Swim, Serializable {
+    @Serial
+    private static final long serialVersionUID = 22L;
 
     // property for color of dolphin
     String color;
@@ -46,4 +49,11 @@ public class Dolphin extends Animal implements Swim {
         System.out.println("Dolphin: I am swimming at the speed " + swimmingSpeed);
     }
 
+    @Override
+    public String toString() {
+        return "Dolphin{" +
+                "color='" + color + '\'' +
+                ", swimmingSpeed=" + swimmingSpeed +
+                '}';
+    }
 }
