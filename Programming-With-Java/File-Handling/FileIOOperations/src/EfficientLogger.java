@@ -5,7 +5,7 @@ import java.io.IOException;
 public class EfficientLogger {
     public static void main(String[] args) {
         String filePath = "src/documents/user_activity.log";
-        String newLog = "User send a message at " + System.currentTimeMillis() + "\n";
+        String newLog = "User send a message at " + new java.util.Date() + "\n";
 
         try (BufferedWriter bw = new BufferedWriter( new FileWriter(filePath, true))){
             bw.write(newLog);
