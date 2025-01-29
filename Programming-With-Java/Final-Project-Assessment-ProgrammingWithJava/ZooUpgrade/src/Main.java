@@ -144,8 +144,10 @@ public class Main {
                      * TODO 6: Introduce case 5 to call the readObjectsFromFile method to
                      * fetch the object state of the animal from the file to display on screen
                      */
+                    break;
                 case 5:
                     readObjectsFromFile();
+                    break;
                 default:
                     System.out.println("Sorry no such animal available.");
             }
@@ -205,6 +207,7 @@ public class Main {
                 e.printStackTrace();
             }
         }
+        System.out.println("Animal state saved successfully.");
     }
     /**
      * TODO 3: End
@@ -225,6 +228,7 @@ public class Main {
             File file = new File(fileName);
             int text;
             try (FileReader reader = new FileReader(file)) {
+                System.out.print(" " + titles[i] + " data retrieved from file: ");
                 while ((text = reader.read()) != -1) {
                     System.out.print((char) text);
                 }
@@ -232,18 +236,8 @@ public class Main {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-
-//            try (BufferedReader reader = new BufferedReader(new FileReader(file)) {
-//
-//            } catch (FileNotFoundException e) {
-//                throw new RuntimeException(e);
-//            } catch (IOException e) {
-//                throw new RuntimeException(e);
-//            }
         }
     }
-
-
 /**
  * TODO 4: End
  */
