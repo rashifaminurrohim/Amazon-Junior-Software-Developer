@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Table in HTML</title>
+</head>
+
+<body>
+  <table border="1">
+    <caption>Weekly Class SChedule</caption>
+    <thead>
+      <tr>
+        <th>Day</th>
+        <th>Time</th>
+        <th>Subject</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>Monday</td>
+        <td>09:00 AM - 10:00 AM</td>
+        <td>Math</td>
+      </tr>
+
+      <tr>
+        <td>Tuesday</td>
+        <td>10:00 AM - 11:00 AM</td>
+        <td>Science</td>
+      </tr>
+    </tbody>
+
+  </table>
+  <br>
+
+  <table border="1">
+    <thead>
+      <tr>
+        <th rowspan="2">Day</th>
+        <th colspan="2">Time</th>
+      </tr>
+      <tr>
+        <td> 9 AM – 10 AM</td>
+        <td>10 AM – 11 AM</td>
+      </tr>
+    </thead>
+    <tbody>
+      
+      <tr>
+        <td>Monday</td>
+        <td>Maths</td>
+        <td>Science</td>
+      </tr>
+      <tr>
+        <td rowspan="2">Tuesday</td>
+        <td>Maths</td>
+        <td>Science</td>
+      </tr>
+      <tr>
+        <td>History</td>
+        <td>Economics</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="3">Note: Schedule is subject to change.</td>
+      </tr>
+    </tfoot>
+  </table>
+
+
+</body>
+
+</html>
