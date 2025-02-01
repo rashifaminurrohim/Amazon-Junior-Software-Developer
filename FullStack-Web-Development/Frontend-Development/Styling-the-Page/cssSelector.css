@@ -1,0 +1,18 @@
+p {
+  color: navy;
+  font-family: Arial;
+  line-height: 1.6;
+}
+
+.highlight {
+  background-color: yellow;
+  font-weight: bold;
+  padding: 10px;
+}
+
+#main-content {
+  background-color: #f0f8ff;
+  padding: 20px;
+  border: 2px solid #0000ff;
+  margin-bottom: 20px;
+}
