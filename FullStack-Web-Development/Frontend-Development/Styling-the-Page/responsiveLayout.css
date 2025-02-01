@@ -1,0 +1,50 @@
+/* Base style for all devices */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #f8b400;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+p {
+  font-size: 16px;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  overflow-x: auto; /* Allows horizontal scrolling if needed */
+}
+
+.content {
+  display: flex;
+  flex-direction: row; /* Align in a row */
+  flex-wrap: nowrap; /* prevent wrapping */
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.container div {
+  background-color: #ffe6a7;
+  padding: 20px;
+  flex: 1 1 auto; /* Allow flex shrinking and growing */
+  min-width: 250px; /* Ensure section do not get too small */
+  box-sizing: border-box;
+}
+
+footer {
+  background-color: #f8b400;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
