@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Function n Events</title>
+  <script src="functionAndEvents.js"></script>
+</head>
+
+<body>
+  <h1>Function n Events</h1>
+
+  <h2>Event listener and event handlers</h2>
+  <button onclick="greetUser()">Click Me!</button>
+
+  <h2>Adding interactivity: addEventListener() and querySelectorAll() methods</h2>
+  <button class="alert-button">Button 1</button>
+  <button class="alert-button">Button 2</button>
+  <button class="alert-button">Button 3</button>
+
+  <h2>Changing text content on hover</h2>
+  <p class="hover-text">Hover over me!</p>
+  <p class="hover-text">Hover over me too!</p>
+
+  <h2>Form validation</h2>
+  <form onsubmit="return validateForm()">
+    <label for="email">Enter your email:</label>
+    <input type="text" id="emailInput" name="email">
+    <button type="submit">Submit</button>
+  </form>
+
+  <h2>Challenges: Temperature Converter</h2>
+    <label>Enter temperature in Celsius:</label>
+    <input type="number" id="celsiusInput">
+    <button onclick="convertToFahrenheit()">Convert to Fahrenheit</button>
+    <p id="result"></p>
+
+  <script>
+    changeText();
+    multipleEvent();
+  </script>
+
+
+</body>
+
+</html>
