@@ -26,6 +26,14 @@ function submitForm() {
 
     /* TODO 1: Get the productName, productCategory, productID, serialNumber,
        warranty, price, vendor, email and phoneNumber using getElementById() */
+    const productName = document.getElementById("productName").value = "";
+    const productCategory= document.getElementById("productCategory").value = "";
+    const productID = document.getElementById("productID").value = "";
+    const warranty = document.getElementById("warranty").value = "";
+    const price = document.getElementById("price").value = "";
+    const vendor = document.getElementById("vendor").value = "";
+    const email = document.getElementById("email").value = "";
+    const phoneNumber = document.getElementById("phoneNumber").value = "";
 
 
     clearErrors();
@@ -38,34 +46,64 @@ function submitForm() {
 
     // Product Category validation (non-empty)
     // TODO 2: Put validation for productCategory with error message "Please select a product category."
-
-
+    if (!productCategory) {
+        displayError("productCategoryError", "Product category is required.");
+        isValid = false;
+    }
+    
     // Product ID validation (non-empty)
     // TODO 3: Put validation for productID with error message "Product ID is required."
+    if (!productID) {
+        displayError("productIDError", "Product id is required.");
+        isValid = false;
+    }
 
 
     // Purchase Date validation (non-empty)
     // TODO 4: Put validation for purchaseDate with error message "Purchase date is required."
-
+    if (!purchaseDate) {
+        displayError("purchaseDateError", "Purchase date is required.");
+        isValid = false;
+    }
 
     // Warranty validation (1-5 years)
     // TODO 5: Put validation for warranty between 1-5 yrs with error message "Warranty must be between 1 and 5 years."
-
+    if (!(warranty <= 1 && warranty >= 5)) {
+        displayError("warrantyError", "Warranty must be between 1 and 5 years.")
+        isValid = false;
+    }
 
     // Price validation (positive number)
     // TODO 6: Put validation for price less than or equal to 0 with error message "Price must be a positive number."
-
+    if (!price || price <= 0) {
+        displayError("priceError", "Price must be a positive number.")
+        isValid = false;
+    }
 
     // Vendor validation (non-empty)
     // TODO 7: Put validation for vendor with error message "Vendor name is required."
-
+    if (!vendor) {
+        displayError("vendorError", "Vendor name is required.");
+        isValid = false;
+    }
 
     // Email validation (valid email format)
     // TODO 8: Put validation for email for valid email checking if "@" is present in the email, with error message "Please enter a valid email."
+    if (!email || !email.includes("@")) {
+        displayError("emailError", "Please enter a valid email.");
+        isValid = false;
+    }
 
     // Phone Number validation (numeric, 10 digits)
     // TODO 9: Put validation for 10 digit phoneNumber with error message "Phone name is required and should be of 10 digits."
-
+    // if (!(phoneNumber.length < 9 && phoneNumber.isNumber)) {
+    //     displayError("phoneNumber", "Phone name is required and should be of 10 digits.");
+    //     isValid = false;
+    // }
+    if (!phoneNumber || phoneNumber.length !== 10) {
+        displayError("phoneNumberError", "Phone number must be 10 digits.");
+        isValid = false;
+    }
 
     if (isValid) {
         document.getElementById("productForm").style.display = "none";
